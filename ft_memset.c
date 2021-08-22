@@ -4,8 +4,8 @@ void	*ft_memset(void *s, int c, size_t n)
 {
 	char	*str;
 
-	str = s;
+	str = (char *) s;
 	while (n--)
-		*str++ = c;
+		*str++ = (char) c;
 	return (s);
 }
