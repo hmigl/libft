@@ -10,5 +10,5 @@ char	*ft_strrchr(const char *s, int c)
 	while (*last-- != *s)
 		if ((char) c == *last)
 			return ((char *) last);
-	return (0);
+	return (NULL);
 }
