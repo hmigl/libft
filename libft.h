@@ -3,6 +3,7 @@
 
 # include <stdlib.h>
 # include <limits.h>
+# include <unistd.h>
 
 /* <ctype.h> */
 int		ft_isalpha(int c);
@@ -32,5 +33,11 @@ size_t	ft_strlcat(char *dst, const char *src, size_t size);
 /* <stdlib.h> */
 int		ft_atoi(const char *nptr);
 void	*ft_calloc(size_t nmemb, size_t size);
+
+/* Non-standard c library */
+void	ft_putchar_fd(char c, int fd);
+void	ft_putstr_fd(char *s, int fd);
+void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 #endif
