@@ -1,10 +1,16 @@
 #include "libft.h"
 
-int	ft_isspace(int c)
+static int	ft_isspace(int c)
 {
 	return (c == ' ' || (c >= '\t' && c <= '\r'));
 }
 
+/*
+ * Converts the initial portion of
+ * the string pointed to by nptr
+ * to int representation and returns
+ * the int
+ */
 int	ft_atoi(const char *nptr)
 {
 	int	res;

@@ -1,5 +1,10 @@
 #include "libft.h"
 
+/*
+ * Copies n bytes from memory area src to memory area dst.
+ * The two strings may overlap. The copy is always done
+ * in a non-destructive manner
+ */
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char	*to;

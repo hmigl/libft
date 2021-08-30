@@ -1,5 +1,10 @@
 #include "libft.h"
 
+/*
+ * Returns a pointer to a new string which is a
+ * duplicate of string s. Memory is obtained with MALLOC()
+ * It returns NULL if insufficient memory was available
+ */
 char	*ft_strdup(const char *s)
 {
 	size_t	slen;

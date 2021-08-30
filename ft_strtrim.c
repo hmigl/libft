@@ -1,5 +1,10 @@
 #include "libft.h"
 
+/*
+ * Allocates (MALLOC()) and returns a copy
+ * of 's1' with the chars specified in 'set'
+ * removed from the beginning and the end of the string
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	end;

@@ -7,6 +7,11 @@ static	size_t	ft_minbtwo(size_t n1, size_t n2)
 	return (n2);
 }
 
+/*
+ * Allocates (MALLOC()) and returns a substring
+ * from the string 's'. It begins at start
+ * and its max size is len
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;

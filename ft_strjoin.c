@@ -1,5 +1,9 @@
 #include "libft.h"
 
+/*
+ * Allocates (w/ MALLOC()) and returns a new string,
+ * which is the result of concatenation of the params
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char	*new;
