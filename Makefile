@@ -12,6 +12,11 @@ FILES = ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 OBJ = $(FILES:c=o)
 RM = rm -f
 
+BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
+	      ft_lstlast.c ft_lstadd_back.c
+
+BONUS_OBJ = $(BONUS_FILES:c=o)
+
 all: $(NAME)
 
 $(NAME): $(OBJ)
@@ -20,8 +25,14 @@ $(NAME): $(OBJ)
 $(OBJ): $(FILES)
 	$(CC) $(CFLAGS) -c $(FILES)
 
+bonus: $(BONUS_OBJ)
+	ar -rcs $(NAME) $(BONUS_OBJ)
+
+$(BONUS_OBJ): $(BONUS_FILES)
+	$(CC) $(CFLAGS) -c $(BONUS_FILES)
+
 clean:
-	$(RM) $(OBJ)
+	$(RM) $(OBJ) $(BONUS_OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
@@ -29,7 +40,7 @@ fclean: clean
 re: fclean all
 
 so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES)
-	gcc -nostartfiles -shared -o libft.so $(OBJ)
+	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES) $(BONUS_FILES)
+	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
 
 .PHONY: all clean fclean re so
