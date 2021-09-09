@@ -1,5 +1,42 @@
 #include "libft.h"
 
+static size_t	ft_wdscnt(char const *s, char c);
+static size_t	ft_elsize(const char *s, char c);
+static char		*ft_wdfactory(char const *s, char c);
+static void		*ft_free_it(char **it);
+
+/*
+ * Returns and array of strings
+ * obtained by splitting 's' using the
+ * char 'c' as a delimiter. The array must be
+ * ended by a NULL pointer
+ */
+char	**ft_split(char const *s, char c)
+{
+	char	**array;
+	size_t	wds;
+	size_t	i;
+
+	if (!s)
+		return (NULL);
+	wds = ft_wdscnt(s, c);
+	array = (char **)malloc((wds + 1) * sizeof(char *));
+	if (!array)
+		return (NULL);
+	i = -1;
+	while (++i < wds)
+	{
+		while (*s && *s == c)
+			s++;
+		array[i] = ft_wdfactory(s, c);
+		if (!array)
+			return (ft_free_it(array));
+		s += ft_elsize(s, c) + 1;
+	}
+	array[i] = NULL;
+	return (array);
+}
+
 static size_t	ft_wdscnt(char const *s, char c)
 {
 	size_t	wc;
@@ -47,42 +84,14 @@ static char	*ft_wdfactory(char const *s, char c)
 		str[j] = s[j];
 		j++;
 	}
-	str[j] = 0;
+	str[j] = '\0';
 	return (str);
 }
 
 static void	*ft_free_it(char **it)
 {
-	if (!it)
-		return (NULL);
-	while (*it != NULL)
+	while (*it)
 		free(*it++);
 	free(it);
 	return (NULL);
-}
-
-char	**ft_split(char const *s, char c)
-{
-	char	**array;
-	size_t	wds;
-	size_t	i;
-
-	if (!s)
-		return (NULL);
-	wds = ft_wdscnt(s, c);
-	array = (char **)malloc((wds + 1) * sizeof(char *));
-	if (!array)
-		return (NULL);
-	i = -1;
-	while (++i < wds)
-	{
-		while (*s && *s == c)
-			s++;
-		array[i] = ft_wdfactory(s, c);
-		if (!array)
-			return (ft_free_it(array));
-		s += ft_elsize(s, c) + 1;
-	}
-	array[i] = NULL;
-	return (array);
 }
