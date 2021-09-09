@@ -13,7 +13,8 @@ OBJ = $(FILES:c=o)
 RM = rm -f
 
 BONUS_FILES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c \
-	      ft_lstlast.c ft_lstadd_back.c
+	      ft_lstlast.c ft_lstadd_back.c ft_lstdelone.c \
+	      ft_lstclear.c ft_lstiter.c ft_lstmap.c
 
 BONUS_OBJ = $(BONUS_FILES:c=o)
 
@@ -39,8 +40,4 @@ fclean: clean
 
 re: fclean all
 
-so:
-	$(CC) -nostartfiles -fPIC $(CFLAGS) $(FILES) $(BONUS_FILES)
-	gcc -nostartfiles -shared -o libft.so $(OBJ) $(BONUS_OBJ)
-
-.PHONY: all clean fclean re so
+.PHONY: all clean fclean re bonus
