@@ -6,13 +6,20 @@
  */
 char	*ft_strrchr(const char *s, int c)
 {
-	const char	*last;
+	char	*str;
+	char	ch;
+	size_t	n;
 
-	last = s + ft_strlen(s);
-	if ((char) c == '\0')
-		return ((char *) last);
-	while (*last-- != *s)
-		if ((char) c == *last)
-			return ((char *) last);
+	n = ft_strlen(s);
+	str = (char *)s + n;
+	ch = (char)c;
+	while (n--)
+	{
+		if (*str == ch)
+			return (str);
+		str--;
+	}
+	if (*str == ch)
+		return (str);
 	return (NULL);
 }
