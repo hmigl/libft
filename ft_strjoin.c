@@ -13,9 +13,12 @@ char	*ft_strjoin(char const *s1, char const *s2)
 	if (!s1 || !s2)
 		return (NULL);
 	len = ft_strlen(s1) + ft_strlen(s2);
-	new = (char *)ft_calloc(len + 1, sizeof(char));
+	new = (char *)malloc(len + 1 * sizeof(char));
 	if (!new)
+	{
+		free(new);
 		return (NULL);
+	}
 	newstr = new;
 	while (*s1)
 		*new++ = *s1++;
