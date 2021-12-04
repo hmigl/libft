@@ -6,7 +6,7 @@ static char		*ft_wdfactory(char const *s, char c);
 static void		*ft_free_it(char **it);
 
 /*
- * Returns and array of strings
+ * Returns an array of strings
  * obtained by splitting 's' using the
  * char 'c' as a delimiter. The array must be
  * ended by a NULL pointer
