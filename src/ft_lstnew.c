@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 /*
  * Allocates (with MALLOC()) and returns a new

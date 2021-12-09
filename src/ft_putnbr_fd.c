@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 /*
  * Outputs the integer 'n' to the

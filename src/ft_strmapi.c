@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 /*
  * Applies the function 'f' to each char of the string 's'

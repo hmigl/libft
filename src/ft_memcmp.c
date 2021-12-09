@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 /*
  * Compares the first n bytes (each interpreted as

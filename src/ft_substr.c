@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static	size_t	ft_minbtwo(size_t n1, size_t n2)
 {

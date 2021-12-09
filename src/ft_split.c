@@ -1,4 +1,4 @@
-#include "libft.h"
+#include "../libft.h"
 
 static size_t	ft_wdscnt(char const *s, char c);
 static size_t	ft_elsize(const char *s, char c);
