@@ -5,6 +5,9 @@
 # include <limits.h>
 # include <unistd.h>
 
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 1000
+# endif
 /* <ctype.h> */
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
@@ -47,6 +50,7 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
 int		ft_checks_ext(const char *str, const char *ext);
+char	*get_next_line(int fd);
 
 /* bonus */
 typedef struct s_list
