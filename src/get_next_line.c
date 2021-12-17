@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:27:24 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:27:40 by hmigl            ###   ########.fr       */
+/*   Updated: 2021/12/17 11:17:21 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,6 @@ static char	*read_file(int fd, char *hold_on, char	*tmp_storage)
 			hold_on = ft_strdup("");
 		aux = hold_on;
 		hold_on = ft_strjoin(aux, tmp_storage);
-		free(aux);
 		if (ft_strchr(hold_on, '\n'))
 			break ;
 	}

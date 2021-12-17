@@ -25,7 +25,7 @@ RM = rm -f
 
 all: $(NAME)
 
-$(NAME): $(OBJ)
+$(NAME): $(OBJ_DIR) $(OBJ)
 	$(AR) $(NAME) $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c

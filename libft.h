@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:31:23 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:31:26 by hmigl            ###   ########.fr       */
+/*   Updated: 2021/12/17 11:12:23 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,7 +55,7 @@ void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
 void	ft_putnbr_fd(int n, int fd);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
-char	*ft_strjoin(char const *s1, char const *s2);
+char	*ft_strjoin(char *s1, char const *s2);
 char	*ft_strtrim(char const *s1, char const *set);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
