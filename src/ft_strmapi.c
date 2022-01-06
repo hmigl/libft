@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:45 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:26:48 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:23:26 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Applies the function 'f' to each char of the string 's'
- * to create a new string (whith MALLOC()) resulting
- * from successive applications of 'f'
- */
 char	*ft_strmapi(char const *s, char (*f) (unsigned int, char))
 {
 	unsigned int	i;

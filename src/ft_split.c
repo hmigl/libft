@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:02 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:26:03 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:22:25 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,12 +17,6 @@ static size_t	ft_elsize(const char *s, char c);
 static char		*ft_wdfactory(char const *s, char c);
 static void		*ft_free_it(char **it);
 
-/*
- * Returns an array of strings
- * obtained by splitting 's' using the
- * char 'c' as a delimiter. The array must be
- * ended by a NULL pointer
- */
 char	**ft_split(char const *s, char c)
 {
 	char	**array;

@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:25:13 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:25:16 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:21:26 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Copies n bytes from memory
- * area src to memory area dest.
- * Memory must not overlap (L -> R)
- */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	char	*to;

@@ -6,15 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:23:30 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:23:32 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:18:44 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Checks if 'str' ends with 'ext'
- */
 int	ft_checks_ext(const char *str, const char *ext)
 {
 	size_t	str_size;

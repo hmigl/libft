@@ -6,16 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:20 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/17 11:20:43 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:22:57 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Allocates (w/ MALLOC()) and returns a new string,
- * which is the result of concatenation of the params
- */
 char	*ft_strjoin(char *s1, char const *s2)
 {
 	char	*new;

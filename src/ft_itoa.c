@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:24:03 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:24:04 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:19:50 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ static int	ft_numlen(int num)
 	return (1 + ft_numlen(num / 10));
 }
 
-/*
- * Allocates (MALLOC()) and retuns a string
- * representing the integer received. Handles negative
- * nums
- */
 char	*ft_itoa(int n)
 {
 	char	*str;

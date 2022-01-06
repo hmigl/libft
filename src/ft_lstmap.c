@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:24:47 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:24:48 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:20:43 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Iterates the list 'lst' and applies the function 'f' to
- * the content of each element. Creates a new list resulting
- * of the sucessive applications of 'f'
- */
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*new_element;

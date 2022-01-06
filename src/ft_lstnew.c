@@ -6,18 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:24:51 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:24:52 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:20:52 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Allocates (with MALLOC()) and returns a new
- * element. The variable 'content' is initialized
- * with the value of the parameter 'content'.
- * The variable 'next' is initialized to NULL
- */
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*element;

@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:25:21 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:25:32 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:21:32 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Copies n bytes from memory area src to memory area dst.
- * The two strings may overlap. The copy is always done
- * in a non-destructive manner
- */
 void	*ft_memmove(void *dst, const void *src, size_t n)
 {
 	char	*to;

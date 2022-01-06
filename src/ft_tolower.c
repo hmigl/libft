@@ -6,14 +6,10 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:27:15 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:27:16 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:24:00 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-/*
- * Converts uppercase letters
- * to lowercase
- */
 int	ft_tolower(int c)
 {
 	if (c >= 'A' && c <= 'Z')

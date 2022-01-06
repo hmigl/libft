@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:27:10 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:27:11 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:23:54 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,6 @@ static	size_t	ft_minbtwo(size_t n1, size_t n2)
 	return (n2);
 }
 
-/*
- * Allocates (MALLOC()) and returns a substring
- * from the string 's'. It begins at start
- * and its max size is len
- */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*sub;

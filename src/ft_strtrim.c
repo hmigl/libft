@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:27:06 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:27:07 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:23:48 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Allocates (MALLOC()) and returns a copy
- * of 's1' with the chars specified in 'set'
- * removed from the beginning and the end of the string
- */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	end;

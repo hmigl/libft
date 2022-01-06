@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:11 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:26:13 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:22:45 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Returns a pointer to a new string which is a
- * duplicate of string s. Memory is obtained with MALLOC()
- * It returns NULL if insufficient memory was available
- */
 char	*ft_strdup(const char *s)
 {
 	size_t	slen;

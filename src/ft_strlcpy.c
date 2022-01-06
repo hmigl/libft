@@ -6,17 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:31 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:26:32 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:23:15 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Copies up to 'size - 1' chars from the
- * NUL-terminated string src to dst, NUL-terminating
- * the result
- */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	size_t	len;

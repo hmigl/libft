@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:27:24 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/17 11:17:21 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:24:33 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,13 +16,6 @@ static char	*read_file(int fd, char *hold_on, char *tmp_storage);
 static char	*line_up(char *disorganized);
 static char	*next_round(char *to_update);
 
-/*
- * GNL will read a file with the amount of BUFFER_SIZE
- * and determine if it the string is a line or not. If
- * not, GNL will read the same amount again. It should return
- * the line that has just been read. If there's nothing else to read
- * it should return NULL
- */
 char	*get_next_line(int fd)
 {
 	static char	*unforgettable = NULL;
@@ -45,10 +38,6 @@ char	*get_next_line(int fd)
 	return (line);
 }
 
-/*
- * This function reads a file descriptor with read() and updates
- * the static variable with the buffer's contents
- */
 static char	*read_file(int fd, char *hold_on, char	*tmp_storage)
 {
 	ssize_t		rd_byts;
@@ -75,10 +64,6 @@ static char	*read_file(int fd, char *hold_on, char	*tmp_storage)
 	return (hold_on);
 }
 
-/*
- * line_up() will just copy what was read to
- * the line, which is what GNL will return
- */
 static char	*line_up(char *disorganized)
 {
 	size_t		i;
@@ -102,10 +87,6 @@ static char	*line_up(char *disorganized)
 	return (line);
 }
 
-/*
- * The function next_round() will basically
- * deal with the remaining content
- */
 static char	*next_round(char *to_update)
 {
 	int			i;

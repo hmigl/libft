@@ -6,16 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:06 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:26:07 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:22:38 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Returns a pointer to the first ocurrence
- * of char c in the string s
- */
 char	*ft_strchr(const char *s, int c)
 {
 	if ((char) c == '\0')

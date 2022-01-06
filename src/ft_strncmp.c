@@ -6,16 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:52 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:26:53 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:23:32 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Compares no more than n chars of two strings.
- * Chars that appear after a '\0' aren't compared
- */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	unsigned char	*str1;

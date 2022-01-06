@@ -6,16 +6,12 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:25:54 by hmigl             #+#    #+#             */
-/*   Updated: 2021/12/14 14:25:55 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:22:03 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-/*
- * Outputs the integer 'n' to the
- * given fd
- */
 void	ft_putnbr_fd(int n, int fd)
 {
 	if (n == INT_MIN)
