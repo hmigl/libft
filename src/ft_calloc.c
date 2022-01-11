@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:23:25 by hmigl             #+#    #+#             */
-/*   Updated: 2022/01/06 11:18:38 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/11 08:32:11 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_calloc(size_t nmemb, size_t size)
 
 	nof_bytes = nmemb * size;
 	ptr = malloc(nof_bytes);
-	if (!ptr || nof_bytes > INT_MAX)
+	if (!ptr || nof_bytes > 2147483647)
 		return (NULL);
 	ft_bzero(ptr, nof_bytes);
 	return (ptr);

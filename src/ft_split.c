@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:26:02 by hmigl             #+#    #+#             */
-/*   Updated: 2022/01/06 11:22:25 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/11 08:33:07 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 static size_t	ft_wdscnt(char const *s, char c);
 static size_t	ft_elsize(const char *s, char c);
 static char		*ft_wdfactory(char const *s, char c);
-static void		*ft_free_it(char **it);
 
 char	**ft_split(char const *s, char c)
 {
@@ -23,7 +22,7 @@ char	**ft_split(char const *s, char c)
 	size_t	wds;
 	size_t	i;
 
-	if (!s)
+	if (!s || !*s)
 		return (NULL);
 	wds = ft_wdscnt(s, c);
 	array = (char **)malloc((wds + 1) * sizeof(char *));
@@ -36,7 +35,10 @@ char	**ft_split(char const *s, char c)
 			s++;
 		array[i] = ft_wdfactory(s, c);
 		if (!array)
-			return (ft_free_it(array));
+		{
+			ft_free_matrix(array);
+			return (NULL);
+		}
 		s += ft_elsize(s, c) + 1;
 	}
 	array[i] = NULL;
@@ -92,12 +94,4 @@ static char	*ft_wdfactory(char const *s, char c)
 	}
 	str[j] = '\0';
 	return (str);
-}
-
-static void	*ft_free_it(char **it)
-{
-	while (*it)
-		free(*it++);
-	free(it);
-	return (NULL);
 }
