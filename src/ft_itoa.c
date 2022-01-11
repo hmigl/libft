@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:24:03 by hmigl             #+#    #+#             */
-/*   Updated: 2022/01/06 11:19:50 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/01/06 11:43:25 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ char	*ft_itoa(int n)
 	size_t	nlen;
 	int		sig;
 
-	if (n == INT_MIN)
+	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	nlen = ft_numlen(n);
 	sig = n < 0;
