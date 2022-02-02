@@ -6,7 +6,7 @@
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/12/14 14:31:23 by hmigl             #+#    #+#             */
-/*   Updated: 2022/01/06 11:42:45 by hmigl            ###   ########.fr       */
+/*   Updated: 2022/02/02 16:25:07 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,10 +15,6 @@
 
 # include <stdlib.h>
 # include <unistd.h>
-
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 1
-# endif
 
 int		ft_isalpha(int c);
 int		ft_isalnum(int c);
@@ -58,7 +54,6 @@ char	*ft_strmapi(char const *s, char (*f) (unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 char	**ft_split(char const *s, char c);
 int		ft_checks_ext(const char *str, const char *ext);
-char	*get_next_line(int fd);
 void	ft_free_matrix(char **matrix);
 
 typedef struct s_list
