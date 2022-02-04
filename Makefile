@@ -3,7 +3,6 @@ NAME := libft.a
 SRC_DIR := src
 OBJ_DIR := obj
 
-MAKEFLAGS += --silent
 CFLAGS := -Wall -Wextra -Werror -ggdb3
 CC := gcc $(CFLAGS)
 
@@ -16,7 +15,7 @@ SRC := ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 	ft_strtrim.c ft_substr.c ft_tolower.c ft_toupper.c ft_checks_ext.c \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_free_matrix.c \
-	ft_isnumber.c
+	ft_isnumber.c ft_atol.c
 
 OBJ_FILES = $(SRC:c=o)
 OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
@@ -27,19 +26,19 @@ RM = rm -rf
 all: $(NAME)
 
 $(NAME): $(OBJ_DIR) $(OBJ)
-	$(AR) $(NAME) $(OBJ)
+	@$(AR) $(NAME) $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	$(CC) -c $< -o $@
+	@$(CC) -c $< -o $@
 
 $(OBJ_DIR):
-	mkdir -p $(OBJ_DIR)
+	@mkdir -p $(OBJ_DIR)
 
 clean:
-	$(RM) $(OBJ)
+	@$(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+	@$(RM) $(NAME)
 
 re: fclean all
 
