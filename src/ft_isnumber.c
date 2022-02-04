@@ -1,27 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_matrix.c                                   :+:      :+:    :+:   */
+/*   ft_isnumber.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hmigl <hmigl@student.42sp.org.br>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/04 09:56:19 by hmigl             #+#    #+#             */
-/*   Updated: 2022/02/04 09:56:20 by hmigl            ###   ########.fr       */
+/*   Created: 2022/02/04 09:36:08 by hmigl             #+#    #+#             */
+/*   Updated: 2022/02/04 09:51:54 by hmigl            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft.h"
 
-void	ft_free_matrix(char **matrix)
+int	ft_isnumber(char *number)
 {
+	int	num_size;
 	int	i;
 
-	i = 0;
-	while (matrix[i] != NULL)
+	num_size = ft_strlen(number);
+	i = 1;
+	if ((number[0] != '-' && number[0] != '+') && !ft_isdigit(number[0]))
+		return (0);
+	while (i < num_size)
 	{
-		free(matrix[i]);
+		if (!ft_isdigit(number[i]))
+			return (0);
 		++i;
 	}
-	free(matrix);
-	return ;
+	return (1);
 }
