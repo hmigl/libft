@@ -2,8 +2,11 @@ NAME := libft.a
 
 SRC_DIR := src
 OBJ_DIR := obj
+INCLUDE_DIR := include
 
-CFLAGS := -Wall -Wextra -Werror -ggdb3
+IFLAGS := -I $(INCLUDE_DIR)
+
+CFLAGS := -Wall -Wextra -Werror -g
 CC := gcc $(CFLAGS)
 
 SRC := ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
@@ -29,7 +32,7 @@ $(NAME): $(OBJ_DIR) $(OBJ)
 	@$(AR) $(NAME) $(OBJ)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@$(CC) -c $< -o $@
+	@$(CC) $(IFLAGS) -c $< -o $@
 
 $(OBJ_DIR):
 	@mkdir -p $(OBJ_DIR)
