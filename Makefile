@@ -1,13 +1,13 @@
 NAME := libft.a
 
-SRC_DIR := src
-OBJ_DIR := obj
-INCLUDE_DIR := include
+INCLUDE := -I include
 
-IFLAGS := -I $(INCLUDE_DIR)
+CFLAGS += -Wall -Wextra -Werror -g
+CC := gcc
 
-CFLAGS := -Wall -Wextra -Werror -g
-CC := gcc $(CFLAGS)
+ARFLAGS := rcs
+
+vpath %.c src
 
 SRC := ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 	ft_atoi.c ft_bzero.c ft_calloc.c ft_itoa.c ft_memchr.c \
@@ -20,22 +20,21 @@ SRC := ft_isalnum.c ft_isalpha.c ft_isascii.c ft_isdigit.c ft_isprint.c \
 	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c ft_free_matrix.c \
 	ft_isnumber.c ft_atol.c
 
-OBJ_FILES = $(SRC:c=o)
-OBJ = $(addprefix $(OBJ_DIR)/, $(OBJ_FILES))
+OBJ_DIR := obj
+OBJ := $(addprefix $(OBJ_DIR)/, $(SRC:.c=.o))
 
-AR = ar -rcs
-RM = rm -rf
+$(OBJ_DIR)/%.o: %.c
+	@$(CC) $(INCLUDE) $(CFLAGS) -c $< -o $@
 
 all: $(NAME)
 
-$(NAME): $(OBJ_DIR) $(OBJ)
-	@$(AR) $(NAME) $(OBJ)
+$(NAME): $(OBJ)
+	@$(AR) $(ARFLAGS) $(NAME) $(OBJ)
 
-$(OBJ_DIR)/%.o: $(SRC_DIR)/%.c
-	@$(CC) $(IFLAGS) -c $< -o $@
+$(OBJ): | $(OBJ_DIR)
 
 $(OBJ_DIR):
-	@mkdir -p $(OBJ_DIR)
+	@mkdir $(OBJ_DIR)
 
 clean:
 	@$(RM) $(OBJ)
@@ -45,4 +44,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all clean fclean re
+.PHONY: all clean
