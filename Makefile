@@ -31,7 +31,7 @@ options:
 	@echo "CC            = $(CC)"
 
 $(NAME): $(OBJS)
-	$(AR) $(ARFLAGS) $(NAME) $<
+	$(AR) $(ARFLAGS) $(NAME) $^
 
 $(OBJS): | $(OBJDIR)
 
